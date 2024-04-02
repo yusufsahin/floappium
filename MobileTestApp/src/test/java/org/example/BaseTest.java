@@ -29,7 +29,7 @@ public class BaseTest {
         options.setDeviceName("Pixel_3a_API_34_extension_level_7_x86_64");
 
         //options.setDeviceName("vivo v2204");
-        options.setApp("//Users//yusufsahin//Projects//floappium//MobileTestApp//src//test//resources//ApiDemos-debug.apk");
+        options.setApp("//Users//yusufsahin//Projects//floappium//MobileTestApp//src//test//resources//General-Store.apk");
 
         driver= new AndroidDriver(new URI("http://127.0.0.1:4723/").toURL(),options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -40,6 +40,13 @@ public class BaseTest {
     public void tearDown(){
         driver.quit();
         service.stop();
+    }
+
+    public Double getFormattedAmount(String amount) {
+
+        Double price= Double.parseDouble(amount.substring(1));
+
+        return price;
     }
 
 }
