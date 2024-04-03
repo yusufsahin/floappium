@@ -30,17 +30,18 @@ public class IOSBaseTest {
         XCUITestOptions options= new XCUITestOptions();
         //options.setDeviceName("Pixel_3a_API_34_extension_level_7_x86_64");
 
-        //options.setDeviceName("iPhone");
-        options.setDeviceName("iPhone 15");
-        //options.setUdid("00008030-00052CC83EA0402E");
+        options.setDeviceName("iPhone");
+        //options.setDeviceName("iPhone 15");
+        options.setUdid("00008030-00052CC83EA0402E");
         options.setPlatformName("iOS");
         options.setAutomationName("XCUITest");
 
-        //options.setCapability("bundleId", "com.example.apple-samplecode.UICatalog");
-        options.setApp("//Users//yusufsahin//Projects//floappium//MobileTestApp//src//test//resources//UIKitCatalog.app");
-       // options.setCapability("xcodeSigningId", "iPhone Developer");
-        //options.setCapability("xcodeOrgId", "BCS4RJGDD6");
-       // options.setWdaLocalPort(8100);
+        options.setCapability("bundleId", "com.example.apple-samplecode.UICatalog");
+       // options.setApp("//Users//yusufsahin//Projects//floappium//MobileTestApp//src//test//resources//UIKitCatalog.app");
+        options.setCapability("xcodeSigningId", "iPhone Developer");
+        options.setCapability("xcodeOrgId", "BCS4RJGDD6");
+        options.setCapability("platformVersion", "17.4.1");
+       options.setWdaLocalPort(8100);
 
         options.setWdaLaunchTimeout(Duration.ofSeconds(50));
 
