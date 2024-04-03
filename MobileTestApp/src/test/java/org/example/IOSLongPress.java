@@ -19,7 +19,7 @@ public class IOSLongPress extends IOSBaseTest{
             params.put("element", ((RemoteWebElement) ele).getId());
             params.put("duration",5);
             driver.executeScript("mobile:touchAndHold",params);
-            
+
         }catch (Exception e) {
             e.printStackTrace();
         }
