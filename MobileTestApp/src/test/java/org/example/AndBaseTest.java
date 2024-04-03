@@ -17,7 +17,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.Duration;
 
-public class BaseTest {
+public class AndBaseTest {
     public AppiumDriverLocalService service;
     public AndroidDriver driver;
     @BeforeEach
@@ -74,5 +74,23 @@ public class BaseTest {
                 "mobile: longClickGesture",
                 ImmutableMap.of("elementId", ((RemoteWebElement) ele).getId(),
                         "duration", 2000));
+    }
+
+
+    public void swipeAction(WebElement ele,String direction,Double percent){
+        ((JavascriptExecutor) driver).executeScript(
+                "mobile:swipeGesture",
+                ImmutableMap.of(
+                        "elementId",((RemoteWebElement) ele).getId(),
+                        "direction", direction,
+                        "percent",percent)
+        );
+        ((JavascriptExecutor) driver).executeScript(
+                "mobile:swipeGesture",
+                ImmutableMap.of(
+                        "elementId",((RemoteWebElement) ele).getId(),
+                        "direction", direction,
+                        "percent",0.75)
+        );
     }
 }

@@ -10,7 +10,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Random;
 
-public class AppiumBasicRandom extends BaseTest {
+public class AppiumBasicRandom extends AndBaseTest {
 
     @Test
     public  void RandomTest() {

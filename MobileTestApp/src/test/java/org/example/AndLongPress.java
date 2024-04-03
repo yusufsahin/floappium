@@ -1,14 +1,11 @@
 package org.example;
 
-import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebElement;
 
-public class AndLongPress extends BaseTest{
+public class AndLongPress extends AndBaseTest {
     @Test
     public void AndLongPressTestDemo() {
         try {

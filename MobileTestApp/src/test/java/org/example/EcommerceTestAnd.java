@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class EcommerceTest extends  BaseTest{
+public class EcommerceTestAnd extends AndBaseTest {
 
     @Test
     public void EcommerceFillFormTest() throws InterruptedException {

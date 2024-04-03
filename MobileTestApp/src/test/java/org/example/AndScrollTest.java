@@ -1,12 +1,9 @@
 package org.example;
 
-import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 
-public class AndScrollTest extends BaseTest{
+public class AndScrollTest extends AndBaseTest {
 
     @Test
     public void AndScrollTestDemo(){
