@@ -11,10 +11,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class EcommerceTestAnd extends AndBaseTest {
+public class EcommerceTest extends AndBaseTest {
 
     @Test
     public void EcommerceFillFormTest() throws InterruptedException {
+
+        ///Home Page
         driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Jane Doe");
         driver.hideKeyboard();
         driver.findElement(By.xpath("//android.widget.RadioButton[@resource-id='com.androidsample.generalstore:id/radioFemale']")).click();
@@ -24,6 +26,8 @@ public class EcommerceTestAnd extends AndBaseTest {
         driver.findElements(By.xpath("//android.widget.TextView[@text='ADD TO CART']")).get(0).click();
         driver.findElements(By.xpath("//android.widget.TextView[@text='ADD TO CART']")).get(0).click();
         driver.findElement(By.id("com.androidsample.generalstore:id/appbar_btn_cart")).click();
+
+        //Cart Page
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.attributeContains(driver.findElement(By.id("com.androidsample.generalstore:id/toolbar_title")),"text","Cart"));
         List<WebElement> productPrices= driver.findElements(By.id("com.androidsample.generalstore:id/productPrice"));
