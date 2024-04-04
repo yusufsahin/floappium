@@ -87,12 +87,6 @@ public class AndBaseTest {
                         "direction", direction,
                         "percent",percent)
         );
-        ((JavascriptExecutor) driver).executeScript(
-                "mobile:swipeGesture",
-                ImmutableMap.of(
-                        "elementId",((RemoteWebElement) ele).getId(),
-                        "direction", direction,
-                        "percent",0.75)
-        );
+
     }
 }
